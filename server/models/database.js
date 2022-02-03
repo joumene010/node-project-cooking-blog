@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect("mongodb+srv://joe:joe@cluster0.thblp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+mongoose.connect(process.env.MONGODB_URI);
 
 const db = mongoose.connection;
 db.once('open', function(){
